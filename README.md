@@ -6,7 +6,10 @@
 
 # Использование
 
-pyhton3 main.py в терминале
+```
+git clone https://github.com/TheSawIsTheLaw/triggers triggers && cd triggers
+python3 main.py
+```
 
 # Как правильно вставить ссылку на триггер
 
