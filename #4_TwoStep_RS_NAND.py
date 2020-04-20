@@ -53,9 +53,6 @@ def printQNQ(clockString, setString, resetString):
                     if resetString[i - 1] == "1" and setString[i - 1] == "1" and clockString[i - 1] != "0":
                         curQ = "X"
                         curNQ = "X"
-                    else:
-                        curQ = arrayQ[i - 1]
-                        curNQ = arrayNQ[i - 1]
             else:
                 if resetString[i - 1] == "1" and setString[i - 1] == "1" and clockString[i - 1] != "0":
                     curQ = "X"
@@ -93,5 +90,6 @@ def main():
     printQNQ(clockString, setString, resetString)
 
 
+ HEAD
 if __name__ == "__main__":
     main()
