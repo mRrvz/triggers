@@ -4,7 +4,7 @@ def signal_to_string(signal):
     return reduce(lambda x, y: x + y, signal)
 
 def parse_url(url):
-    url = url[url.find('wave%'):]
+    url = url[url.find("wave:"):]
     return url[url.find("'") + 1:]
 
 
