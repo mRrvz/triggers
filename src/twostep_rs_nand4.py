@@ -1,4 +1,4 @@
-from trigger_reader import get3, signal_to_string
+from src.trigger_reader import get3, signal_to_string
 
 def getClockString():
     return input("Часики-то тикают... Чё по Clock'у? Вводи: ")

@@ -1,10 +1,10 @@
-from rs_nor1 import rs_nor
-from rs_nand2 import rs_nand
-from onestep_rs_nand3 import onestep_rs_nand
-from twostep_rs_nand4 import twostep_rs_nand
-from twostep_jk_nand5 import twostep_jk_nand
-from syn_d_nand6 import syn_d_nand
-from dyn_d_nand7 import dyn_d_nand
+from src.rs_nor1 import rs_nor
+from src.rs_nand2 import rs_nand
+from src.onestep_rs_nand3 import onestep_rs_nand
+from src.twostep_rs_nand4 import twostep_rs_nand
+from src.twostep_jk_nand5 import twostep_jk_nand
+from src.syn_d_nand6 import syn_d_nand
+from src.dyn_d_nand7 import dyn_d_nand
 
 
 def print_commands():
@@ -15,7 +15,7 @@ def print_commands():
     print("5. Синхронный двухступенчатый JK триггер на элементах И-НЕ")
     print("6. Синхронный двухступенчатый D триггер на элементах И-НЕ")
     print("7. Динамический D триггер")
-    print("8. Выйти")
+    print("8. Выйти\n")
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
 
     while True:
         print_commands()
-        action = input("Введите номер: ")
+        action = input("Выберите пункт меню: ")
 
         if action not in menu:
             print("Такого пункта нет в меню")

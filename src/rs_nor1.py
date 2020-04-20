@@ -1,4 +1,4 @@
-from trigger_reader import get2, signal_to_string
+from src.trigger_reader import get2, signal_to_string
 
 def getResetString():
     return input("Ну-ка чё там по Reset'у? Вводи: ")
