@@ -19,7 +19,6 @@ def printQNQ(clockString, setString, resetString):
         return
 
 
-
     if resetString[0] == "0" and setString[0] == "1":
         curQ = 1
         curNQ = 0
@@ -73,6 +72,8 @@ def printQNQ(clockString, setString, resetString):
     print("#Q: ", end = '')
     for j in arrayNQ:
         print(j, end = '')
+    print("\n\nТы там аккуратненько, слышишь? Первое значение замени на то, которое на диаграмме дано!..")
+    print("НЕ МЕШАЕМ ..... НАЧАЛЬНОЕ ЗНАЧЕНИЕ ИДЁТ НА ГОРОД")
 
 
 def main():
