@@ -1,3 +1,5 @@
+from trigger_reader import get3, signal_to_string
+
 def getClockString():
     return input("Часики-то тикают... Чё по Clock'у? Вводи: ")
 
@@ -57,9 +59,10 @@ def printQNQ(clockString, setString, resetString):
 def main():
     print("Ща порешаем, ё-моё...")
 
-    clockString = getClockString()
-    resetString = getResetString()
-    setString = getSetString()
+    clockString, resetString, setString = get3()
+    print("Clock: ", signal_to_string(clockString))
+    print("Reset: ", signal_to_string(resetString))
+    print("Set: ", signal_to_string(setString))
 
     if len(resetString) != len(setString) or len(clockString) != len(resetString):
         print("Чёт количество точек не совпадает. Я так работать не буду, иди подумай над своим поведением...")
@@ -68,4 +71,5 @@ def main():
     printQNQ(clockString, setString, resetString)
 
 
-main()
+if __name__ == "__main__":
+    main()

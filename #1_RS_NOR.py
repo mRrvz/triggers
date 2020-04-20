@@ -1,3 +1,5 @@
+from trigger_reader import get2, signal_to_string
+
 def getResetString():
     return input("Ну-ка чё там по Reset'у? Вводи: ")
 
@@ -46,8 +48,9 @@ def printQNQ(setString, resetString):
 def main():
     print("Ща порешаем, ё-моё...")
 
-    resetString = getResetString()
-    setString = getSetString()
+    resetString, setString = get2()
+    print("Reset: ", signal_to_string(resetString))
+    print("Set: ", signal_to_string(setString))
 
     if len(resetString) != len(setString):
         print("Чёт количество точек не совпадает. Я так работать не буду, иди подумай над своим поведением...")
@@ -56,4 +59,5 @@ def main():
     printQNQ(setString, resetString)
 
 
-main()
+if __name__ == "__main__":
+    main()
