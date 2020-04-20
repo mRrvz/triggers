@@ -12,12 +12,10 @@ def getKString():
     return input("Во дают. А чё там по K? Вводи: ")
 
 
-def printQNQ(clockString, kString, jString):
+def printQNQ(clockString, kString, jString, curQ, curNQ):
     arrayQ = []
     arrayNQ = []
 
-    curQ = input("Давай первое значение Q: ")
-    curNQ = input("Давай первое значение #Q: ")
     arrayQ.append(curQ)
     arrayNQ.append(curNQ)
 
@@ -58,19 +56,21 @@ def printQNQ(clockString, kString, jString):
         print(j, end = '')
 
 
-def main():
+def twostep_jk_nand():
     print("Ща порешаем, ё-моё...")
 
-    clockString, jString, kString = get3()
+    clockString, jString, kString, q, nq = get3(False)
     print("Clock: ", signal_to_string(clockString))
     print("J: ", signal_to_string(jString))
     print("K: ", signal_to_string(kString))
+    print("Q: ", signal_to_string(q))
+    print("#Q: ", signal_to_string(nq))
 
     if len(kString) != len(jString) or len(clockString) != len(jString):
         print("Чёт количество точек не совпадает. Я так работать не буду, иди подумай над своим поведением...")
         return
 
-    printQNQ(clockString, kString, jString)
+    printQNQ(clockString, kString, jString, q, nq)
 
 if __name__ == "__main__":
-    main()
+    twostep_jk_nand()

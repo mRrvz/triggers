@@ -56,7 +56,7 @@ def printQNQ(clockString, setString, resetString):
         print(j, end = '')
 
 
-def main():
+def onestep_rs_nand():
     print("Ща порешаем, ё-моё...")
 
     clockString, resetString, setString = get3()
@@ -72,4 +72,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    onestep_rs_nand()

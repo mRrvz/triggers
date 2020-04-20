@@ -8,12 +8,10 @@ def getDString():
     return input("Ну-ка чё там по D? Вводи: ")
 
 
-def printQNQ(clockString, dString):
+def printQNQ(clockString, dString, curQ, curNQ):
     arrayQ = []
     arrayNQ = []
 
-    curQ = input("Давай первое значение Q: ")
-    curNQ = input("Давай первое значение #Q: ")
     arrayQ.append(curQ)
     arrayNQ.append(curNQ)
 
@@ -42,18 +40,20 @@ def printQNQ(clockString, dString):
         print(j, end = '')
 
 
-def main():
+def dyn_d_nand():
     print("Ща порешаем, ё-моё...")
 
-    clockString, dString = get2()
+    clockString, dString, q, nq = get2(False)
     print("Clock: ", signal_to_string(clockString))
     print("D: ", signal_to_string(dString))
+    print("Q: ", signal_to_string(q))
+    print("#Q: ", signal_to_string(nq))
 
     if len(dString) != len(clockString):
         print("Чёт количество точек не совпадает. Я так работать не буду, иди подумай над своим поведением...")
         return
 
-    printQNQ(clockString, dString)
+    printQNQ(clockString, dString, q, nq)
 
 if __name__ == "__main__":
-    main()
+    dyn_d_nand()

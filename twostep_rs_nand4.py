@@ -11,7 +11,7 @@ def getSetString():
     return input("Во дают. А чё там по Set'у? Вводи: ")
 
 
-def printQNQ(clockString, setString, resetString):
+def printQNQ(clockString, setString, resetString, q, nq):
     arrayQ = []
     arrayNQ = []
 
@@ -63,22 +63,28 @@ def printQNQ(clockString, setString, resetString):
             arrayQ.append(arrayQ[i - 1])
             arrayNQ.append(arrayNQ[i - 1])
 
+    arrayQ[0] = q
+    arrayNQ[0] = nq
+
     print("Ну посмотри, чё получилось, ё-моё...")
     print("Q: ", end = '')
+
     for j in arrayQ:
         print(j, end = '')
     print()
+
     print("#Q: ", end = '')
     for j in arrayNQ:
         print(j, end = '')
-    print("\n\nТы там аккуратненько, слышишь? Первое значение замени на то, которое на диаграмме дано!..")
-    print("НЕ МЕШАЕМ ..... НАЧАЛЬНОЕ ЗНАЧЕНИЕ ИДЁТ НА ГОРОД")
+
+    #print("\n\nТы там аккуратненько, слышишь? Первое значение замени на то, которое на диаграмме дано!..")
+    #print("НЕ МЕШАЕМ ..... НАЧАЛЬНОЕ ЗНАЧЕНИЕ ИДЁТ НА ГОРОД")
 
 
-def main():
+def twostep_rs_nand():
     print("Ща порешаем, ё-моё...")
 
-    clockString, resetString, setString = get3()
+    clockString, resetString, setString, q, nq = get3(False)
     print("Clock: ", signal_to_string(clockString))
     print("Reset: ", signal_to_string(resetString))
     print("Set: ", signal_to_string(setString))
@@ -87,9 +93,8 @@ def main():
         print("Чёт количество точек не совпадает. Я так работать не буду, иди подумай над своим поведением...")
         return
 
-    printQNQ(clockString, setString, resetString)
+    printQNQ(clockString, setString, resetString, q, nq)
 
 
- HEAD
 if __name__ == "__main__":
-    main()
+    twostep_rs_nand()

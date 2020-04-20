@@ -26,19 +26,38 @@ def parse_signal(trigger):
     return signal
 
 
-def get2():
+def get2(start_value=True):
     url = parse_url(input('Введите ссылку на триггер: '))
     first = parse_signal(url)
-    second = parse_signal(parse_url(url))
 
-    return first, second
-
-
-def get3():
-    url = parse_url(input('Введите ссылку на триггер: '))
-    first = parse_signal(url)
     url = parse_url(url)
     second = parse_signal(url)
-    third = parse_signal(parse_url(url))
 
-    return first, second, third
+    if start_value:
+        return first, second
+
+    url = parse_url(url)
+    q = parse_signal(url)
+    nq = parse_signal(parse_url(url))
+
+    return first, second, q[0], nq[0]
+
+
+def get3(start_value=True):
+    url = parse_url(input('Введите ссылку на триггер: '))
+    first = parse_signal(url)
+
+    url = parse_url(url)
+    second = parse_signal(url)
+
+    url = parse_url(url)
+    third = parse_signal(url)
+
+    if start_value:
+        return first, second, third
+
+    url = parse_url(url)
+    q = parse_signal(url)
+    nq = parse_signal(parse_url(url))
+
+    return first, second, third, q[0], nq[0]

@@ -45,7 +45,7 @@ def printQNQ(setString, resetString):
         print(j, end = '')
 
 
-def main():
+def rs_nor():
     print("Ща порешаем, ё-моё...")
 
     resetString, setString = get2()
@@ -60,4 +60,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    rs_nor()
