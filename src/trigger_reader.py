@@ -28,8 +28,7 @@ def parse_signal(trigger):
 
 
 def get2(start_value=True):
-    url = unquote(input('Введите ссылку на триггер: '))
-    url = parse_url(url)
+    url = parse_url(unquote(input('Введите ссылку на триггер: ')))
     first = parse_signal(url)
 
     url = parse_url(url)
@@ -46,9 +45,7 @@ def get2(start_value=True):
 
 
 def get3(start_value=True):
-    url = unquote(input('Введите ссылку на триггер: '))
-    url = parse_url(url)
-    
+    url = parse_url(unquote(input('Введите ссылку на триггер: ')))
     first = parse_signal(url)
 
     url = parse_url(url)
