@@ -1,4 +1,5 @@
 from functools import reduce
+from urllib.parse import unquote
 
 def signal_to_string(signal):
     return reduce(lambda x, y: x + y, signal)
@@ -27,7 +28,7 @@ def parse_signal(trigger):
 
 
 def get2(start_value=True):
-    url = parse_url(input('Введите ссылку на триггер: '))
+    url = parse_url(unquote(input('Введите ссылку на триггер: ')))
     first = parse_signal(url)
 
     url = parse_url(url)
@@ -44,7 +45,7 @@ def get2(start_value=True):
 
 
 def get3(start_value=True):
-    url = parse_url(input('Введите ссылку на триггер: '))
+    url = parse_url(unquote(input('Введите ссылку на триггер: ')))
     first = parse_signal(url)
 
     url = parse_url(url)

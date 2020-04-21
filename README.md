@@ -19,11 +19,7 @@ python3 main.py
 
 ![ебаныйтригер](https://sun9-20.userapi.com/c206628/v206628626/f2196/Tvdbt2LRcvA.jpg)
 
-Копируем ссылку и вставляем [сюда](https://www.cafewebmaster.com/online_tools/rawurldecode)
-
-![сайт228](https://sun9-4.userapi.com/c206520/v206520220/f745d/Fjdt4KN1CnU.jpg)
-
-Копируем полученную ссылку и вставляем ее в программу.
+Копируем ссылку и вставляем в программу.
 
 # Над говнокодом работали:
 
