@@ -26,3 +26,5 @@ python3 main.py
 [TheSawIsTheLaw](https://github.com/TheSawIsTheLaw) - говнокодер алгоритмов
 
 [mRrvz](https://github.com/mRrvz) - делаем из говна продукт с 2000 года
+
+![flx](https://sun9-55.userapi.com/c857216/v857216512/16db99/sm6PVQSVV68.jpg)
