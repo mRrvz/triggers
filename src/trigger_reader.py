@@ -4,61 +4,32 @@ from urllib.parse import unquote
 def signal_to_string(signal):
     return reduce(lambda x, y: x + y, signal)
 
-def parse_url(url):
-    url = url[url.find("wave:"):]
-    return url[url.find("'") + 1:]
-
-
-def parse_signal(trigger):
-    signal = []
-
-    i = 0
-    while trigger[i] != "'":
-        if trigger[i].isdigit() or trigger[i] == 'h' or trigger[i] == 'l':
-            signal.append(trigger[i])
-        else:
-            signal.append(signal[-1])
-
-        i += 1
-
-    if 'h' in signal:
-        signal = list(map(lambda x: '1' if x == 'h' else '0', signal))
-
-    return signal
-
 
 def get2(start_value=True):
-    url = parse_url(unquote(input('Введите ссылку на триггер: ')))
-    first = parse_signal(url)
+    first = input("Введите первый сигнал:")
 
-    url = parse_url(url)
-    second = parse_signal(url)
+    second = input("Введите второй сигнал:")
 
     if start_value:
         return first, second
 
-    url = parse_url(url)
-    q = parse_signal(url)
-    nq = parse_signal(parse_url(url))
+    q = input("Введите  Q[0]:")
+    nq = input("Введите сигнал !Q[0]:")
 
-    return first, second, q[0], nq[0]
+    return first, second, q, nq
 
 
 def get3(start_value=True):
-    url = parse_url(unquote(input('Введите ссылку на триггер: ')))
-    first = parse_signal(url)
+    first = input("Введите первый сигнал:")
 
-    url = parse_url(url)
-    second = parse_signal(url)
+    second =input("Введите 2 сигнал:")
 
-    url = parse_url(url)
-    third = parse_signal(url)
+    third =input("Введите 3 сигнал:")
 
     if start_value:
         return first, second, third
 
-    url = parse_url(url)
-    q = parse_signal(url)
-    nq = parse_signal(parse_url(url))
+    q = input("Q[0]: ")
+    nq = input("!Q[0]: ")
 
-    return first, second, third, q[0], nq[0]
+    return first, second, third, q, nq
